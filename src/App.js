@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState }  from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function App () {
+
+    const [tarefas, setTarefas] = useState([]);
+    const [input, setInput] = useState('');
+
+    function adicionar(){
+        if(input !== ''){
+            setTarefas([...tarefas, input]);
+            setInput('')
+        }
+    }
+
+    return(
+        <div className="body">
+            <div className="container">
+                <div className="inputArea">
+                    <h2>ToDo List</h2>
+                    <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
+                    <button type="button" onClick={adicionar}>Adicionar</button>
+                </div>
+                <div className="tarefasArea">
+                    <ul>
+                        {tarefas.map(tarefa => (
+                            <li key={tarefa}>{tarefa}</li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default App;
