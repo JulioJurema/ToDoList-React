@@ -1,0 +1,77 @@
+
+
+.body{
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+}
+
+.container{
+    height: 40em;
+    width: 30em;    
+    background-color: var(--Preto);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    -webkit-box-shadow: -2px 37px 114px -34px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 37px 114px -34px rgba(0,0,0,0.75);
+    box-shadow: -2px 37px 114px -34px rgba(0,0,0,0.75);
+}
+
+h2{
+    padding: 1em;
+    color: var(--VerdeEscuro);
+    -webkit-box-shadow: -2px 16px 127px -21px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 16px 127px -21px rgba(0,0,0,0.75);
+box-shadow: -2px 16px 127px -21px rgba(0,0,0,0.75);
+    
+}
+
+.tarefasArea{
+    overflow-y: scroll;
+    height: 100%;
+    background-color: var(--CinzaEscuro);    
+}
+
+.tarefasArea::-webkit-scrollbar { 
+    display: none;
+}
+
+li{
+    background-color: var(--CinzaEscuro);
+    border: 2px white;
+    margin: 2em 3em;
+    list-style: none;
+    padding: 1.5em;
+    border-radius: 1em;
+    color: var(--VerdeEscuro);
+    border: solid var(--CinzaClaro) 1px;
+    -webkit-box-shadow: -2px 16px 127px -21px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 16px 127px -21px rgba(0,0,0,0.75);
+box-shadow: -2px 16px 127px -21px rgba(0,0,0,0.75);
+}
+
+.inputArea{
+    display: flex;
+    padding: 0;
+    height: 4em;
+}
+
+.inputArea input{
+    height: 100%;
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 0 1em;
+}
+
+.inputArea button{
+    height: 100%;
+    width: 30%;
+    border: none;
+    background-color: var(--VerdeClaro);
+}

@@ -17,17 +17,21 @@ function App () {
     return(
         <div className="body">
             <div className="container">
-                <div className="inputArea">
-                    <h2>ToDo List</h2>
-                    <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
-                    <button type="button" onClick={adicionar}>Adicionar</button>
+                <div className="titleArea">
+                <h2>To<span>Do</span> List</h2>
                 </div>
+                
                 <div className="tarefasArea">
                     <ul>
                         {tarefas.map(tarefa => (
                             <li key={tarefa}>{tarefa}</li>
                         ))}
                     </ul>
+                </div>
+
+                <div className="inputArea">
+                    <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
+                    <button type="button" onClick={adicionar}>Adicionar</button>
                 </div>
             </div>
         </div>
